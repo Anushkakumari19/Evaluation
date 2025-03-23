@@ -39,6 +39,13 @@ let taskManager = (function(){
         getAllTasks(){
             return JSON.stringify(tasks, null, 2)
         }
+        markComplete(taskID){
+            tasks = tasks.map(task => task.id === taskID ? {...task, completed : true})
+
+        }
+        removeTask(taskID){
+            tasks = tasks.filter(task => task.id !== taskID)
+        }
     }
 
 })
