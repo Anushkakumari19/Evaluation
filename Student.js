@@ -46,6 +46,14 @@ let taskManager = (function(){
         removeTask(taskID){
             tasks = tasks.filter(task => task.id !== taskID)
         }
+
+        getPendingTasks(){
+            return tasks.filter(task => !task.completed)
+        }
+        getCompletedTasks(){
+            return tasks.map(task => task.completd)
+        }
+    
     }
 
 })
