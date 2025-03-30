@@ -53,7 +53,7 @@ let taskManager = (function(){
         getCompletedTasks(){
             return tasks.map(task => task.completd)
         }
-    
+       
     }
 
 })
