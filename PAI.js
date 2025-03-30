@@ -1,9 +1,8 @@
-function timer(duaration,callback){
-    setTimeout(() => {
-        let message = ("Meeting in 3 pm")
-        console.log(message)
-    },duration)
+function reminder(message , delay, callback){
+    setTimeout(() =>{
+        callback(message)
+    },delay)
 }
-let timer1 = timer(3000,(message =>{
+reminder("Meeting at 3 PM", 2000, (message) =>{
     console.log(message)
-}))
+})
